@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AdministrationController extends AbstractController
+class UserDashboardController extends AbstractController
 {
-    #[Route('/administration', name: 'app_administration')]
+    #[Route('/compte', name: 'user_dashboard')]
     public function index(): Response
     {
-        return $this->render('administration/index.html.twig', [
-            'controller_name' => 'AdministrationController',
+        return $this->render('user_dashboard/index.html.twig', [
+            'controller_name' => 'UserDashboardController',
         ]);
     }
 }
