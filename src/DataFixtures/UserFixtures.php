@@ -21,10 +21,11 @@ class UserFixtures extends Fixture
         
         
         $userAdmin = new User();
-        $userAdmin->setFirstName('Antoine');
-        $userAdmin->setLastName('Chauvel');
+        $userAdmin->setFirstName('Admin');
+        $userAdmin->setLastName('Admin');
 
         $userAdmin->setEmail('admin@admin.fr');
+        $userAdmin->setPhoto('albator.png');
         // Encodage du mot de passe
         $userAdmin->setPassword(
             $this->passwordEncoder->hashPassword($userAdmin, 'Capturama')
