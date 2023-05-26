@@ -50,6 +50,8 @@ a:hover {
 
 .header .fa.fa-fw.fa-bars {
     color: #fff;
+    font-size: 2em;
+    margin-right: 25px;
 }
 
 .header .navbar-light .navbar-nav .nav-link {
@@ -331,7 +333,8 @@ a.navbar-brand {
 
 .admin-wrapper {
     width: 100%;
-    margin: 15px;
+    display: block;
+    margin: auto;
 }
 
 aside {

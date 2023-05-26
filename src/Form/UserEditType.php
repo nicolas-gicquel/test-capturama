@@ -14,7 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 
-class UserType extends AbstractType
+class UserEditType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -22,26 +22,6 @@ class UserType extends AbstractType
             ->add('firstName', TextType::class, ['label' => 'Prénom', 'attr' => ['class' => 'form-control']])
             ->add('lastName', TextType::class, ['label' => 'Nom', 'attr' => ['class' => 'form-control']])
             ->add('email', TextType::class, ['label' => 'Email', 'attr' => ['class' => 'form-control']])
-            ->add('password', RepeatedType::class, [
-                'type' => PasswordType::class,
-                'invalid_message' => 'Les deux mots de passe doivent être identiques',
-                'options' => ['attr' => ['class' => 'password-field form-control']],
-                'required' => true,
-                'first_options'  => ['label' => 'Mot de passe'],
-                'second_options' => ['label' => 'Confirmation de mot de passe'],
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Veuillez entrer un mot de passe',
-                    ]),
-                    new Length([
-                        'min' => 8,
-                        'minMessage' => 'Votre mot de passe doit contenir au moins {{ limit }} caractères',
-                        'max' => 4096,
-                    ]),
-                ],
-            ])
-
-
             ->add('photo', FileType::class, [
                 'label' => 'Photo',
                 'attr' => ['class' => 'form-control-file'],

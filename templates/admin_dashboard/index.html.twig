@@ -1,6 +1,6 @@
 {% extends 'admin.html.twig' %}
 
-{% block title %}Hello AdminDashboardController!
+{% block title %}Administration
 {% endblock %}
 
 {% block body %}
@@ -19,8 +19,8 @@
 
 	<div class="admin-wrapper">
 		<h1 class="text-center">Liste des utilisateurs</h1>
-		<div class="table-responsive">
-			<table class="table">
+		<div class="table-responsive m-4">
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>Prénom</th>
@@ -39,7 +39,7 @@
 							<td>{{ user.email }}</td>
 							<td>
 								{% if user.photo %}
-									<img src="{{ asset('uploads/' ~ user.photo) }}" width="100"></td>
+									<img src="{{ asset('uploads/photoUser/' ~ user.photo) }}" width="100"></td>
 							{% endif %}
 							<td>{{ user.biography }}</td>
 							<td >
@@ -57,6 +57,6 @@
 				</tbody>
 			</table>
 		</div>
-		<a class="btn btn-primary" href="{{ path('app_user_new') }}">Ajouter un utilisateur</a>
+		<a class="btn btn-primary m-4" href="{{ path('app_user_new') }}">Ajouter un utilisateur</a>
 	</div>
 {% endblock %}

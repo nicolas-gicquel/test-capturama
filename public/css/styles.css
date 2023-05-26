@@ -132,6 +132,8 @@ a:hover {
 
 .header .fa.fa-fw.fa-bars {
   color: #fff;
+  font-size: 2em;
+  margin-right: 25px;
 }
 
 .header .navbar-light .navbar-nav .nav-link {
@@ -407,13 +409,29 @@ a.navbar-brand {
 
 .admin-wrapper {
   width: 100%;
-  margin: 15px;
+  display: block;
+  margin: auto;
 }
 
 aside {
   display: inline-flex;
   min-height: 90vh;
   width: 100%;
+}
+
+/*********Forms*********/
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  max-width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.formContainer .form-group label {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 table i {

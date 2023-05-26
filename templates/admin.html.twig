@@ -6,7 +6,7 @@
 			{% block title %}Espace administration
 			{% endblock %}
 		</title>
-		<link rel="shortcut icon" type="image/png" href="{{asset('images/favicon.png')}}"/>
+		<link rel="icon" type="image/png" href="{{ asset('pictures/capturama_2021.svg') }}" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 		<link rel="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
@@ -38,7 +38,7 @@
 				<div class="sidebar left ">
 					<div class="user-panel">
 						<div class="pull-left image">
-							<img src="{{ asset('pictures/albator.png') }}" class="rounded-circle" alt="User Image">
+							<img src="{{ asset('uploads/photoUser/'~ app.user.photo) }}" class="rounded-circle" alt="User Image">
 						</div>
 						<div class="pull-left info">
 							<p>{{app.user.firstname}} {{app.user.lastname}}</p>
@@ -49,7 +49,7 @@
 					</div>
 					<ul class="list-sidebar bg-defoult">
 						<li>
-							<a href="#" data-toggle="collapse"  class="collapsed active">
+							<a href="/admin" data-toggle="collapse"  class="collapsed active">
 								<i class="fa fa-th-large"></i>
 								<span class="nav-label">
 									Dashboard
@@ -66,6 +66,12 @@
 							<a href="">
 								<i class="fa fa-pie-chart"></i>
 								<span class="nav-label">Statistiques</span>
+							</a>
+						</li>
+						<li>
+							<a href="/logout">
+								<i class="fa fa-sign-out"></i>
+								<span class="nav-label">Déconnexion</span>
 							</a>
 						</li>
 						
